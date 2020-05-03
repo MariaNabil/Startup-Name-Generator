@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
-//import './savedSuggestionsPage.dart';
+import './savedSuggestionsPage.dart';
 void main() => runApp(MyApp());
 
 // #docregion MyApp
@@ -48,7 +48,7 @@ class RandomWordsState extends State<RandomWords> {
         pair.first + " "+ pair.second,
         style: _biggerFont,
       ),
-      /*trailing: Icon(
+      trailing: Icon(
         // Add the lines from here...
         alreadySaved ? Icons.favorite : Icons.favorite_border,
         color: alreadySaved ? Colors.red : null,
@@ -61,12 +61,12 @@ class RandomWordsState extends State<RandomWords> {
             _saved.add(pair);
           }
         });
-      },*/
+      },
     );
   }
   // #enddocregion _buildRow
 
-  /*void _pushSaved() {
+  void _pushSaved() {
     Navigator.of(context).push(
         MaterialPageRoute<void>(   // Add 20 lines from here...
           builder: (BuildContext context) {
@@ -74,7 +74,7 @@ class RandomWordsState extends State<RandomWords> {
           },
         ),
     );
-  }*/
+  }
 
   // #docregion RWS-build
   @override
@@ -82,9 +82,9 @@ class RandomWordsState extends State<RandomWords> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Startup Name Generator'),
-        /*actions: <Widget>[      // Add 3 lines from here...
+        actions: <Widget>[      // Add 3 lines from here...
           IconButton(icon: Icon(Icons.list), onPressed: _pushSaved),
-        ],*/
+        ],
       ),
       body: _buildSuggestions(),
     );
